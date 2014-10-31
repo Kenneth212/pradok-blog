@@ -36,5 +36,6 @@
 	else {
 		echo "<p>$connection->error</p>";
 	}
+	// added paragraph tags to the code
 
 	$connection->close(); 
