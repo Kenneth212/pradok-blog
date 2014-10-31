@@ -5,7 +5,7 @@
 
 	if($connection->connect_error) {
 		
-	die("Error: " . $connection->connect_error);
+	die("<p>Error: " . $connection->connect_error . "</p>");
 
 	}
 
@@ -16,12 +16,12 @@
 		$query = $connection->query("CREATE DATABASE $database");
 		// checks if our query is successful
 		if($query) {
-			echo "Successfully created database: " . $database;
+			echo "<p>Successfully created database: " . $database . "</p>";
 		}
 	}
 	// 	shows that DATABASE exists 
 	else {
-		echo "DATABASE already exists.Successfully create table posts";
+		echo "<p>DATABASE already exists.</P>";
 	}
 
 	$query = $connection->query("CREATE TABLE posts ("
@@ -32,6 +32,9 @@
 
 	if ($query) {
 		echo "Successfully create table: posts";
+	}
+	else {
+		echo "<p>$connection->error</p>";
 	}
 
 	$connection->close(); 
