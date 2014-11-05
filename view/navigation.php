@@ -1,6 +1,7 @@
 <?php
 	// this require once connects to config.php
 	require_once(__DIR__ ."/../model/config.php");
+	// creates a connection that leads to index.php
 ?>
 	
 <nav>
