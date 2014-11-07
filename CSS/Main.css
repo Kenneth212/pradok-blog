@@ -3,5 +3,5 @@ body{
 }
 
 @media (max-width: 320px) { 
-	html { background-color: green; }
+	html { background-color: tan; }
 }
