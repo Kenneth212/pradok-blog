@@ -1,7 +1,7 @@
 body{
 	background-color: blue; 
 }
-
-@media (max-width: 320px) { 
+/*made a i-pad resolution for 1024*/
+@media (max-width: 1024px) { 
 	html { background-color: tan; }
 }
