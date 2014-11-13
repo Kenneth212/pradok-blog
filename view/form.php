@@ -1,13 +1,15 @@
 <?php
 	require_once(__DIR__ . "/../model/config.php");
+	//added a form method
 ?>
 <h1>Create Blog Post</h1>
-//added a form method
+
 <form method="post" action="<?php echo $path . "controller/create-post.php"; ?>">
 	<div>
-		<label for="title">Title: </label>
+		<label for="title">Title : </label>
 		<input type="text" name="title" />
 	</div>
+	
 	<div>
 		<label for="post">Post: </label>
 		<textarea name="post"></textarea>
