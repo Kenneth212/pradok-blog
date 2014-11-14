@@ -4,9 +4,7 @@
 	$connection = new mysqli($host, $username, $password);
 
 	if($connection->connect_error) {
-		
-	die("<p>Error: " . $connection->connect_error . "</p>");
-
+		die("<p>Error: " . $connection->connect_error . "</p>");
 	}
 
 	$exists = $connection->select_db($database);
