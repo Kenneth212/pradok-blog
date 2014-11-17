@@ -1,8 +1,9 @@
 <?php
 	require_once(__DIR__ . "/../model/config.php");
 
-	$connection = new mysqli($host, $username, $password);
 
+	$connection = new mysqli($host, $username, $password);
+	
 	if($connection->connect_error) {
 		die("<p>Error: " . $connection->connect_error . "</p>");
 	}
@@ -10,6 +11,8 @@
 	$exists = $connection->select_db($database);
 	
 	if(!$exists) {
+		// Why should I use classes rather than just a collection of functions? well because fucntions are part of classes so thats why using classes is better.
+
 		// sends commands to the database
 		$query = $connection->query("CREATE DATABASE $database");
 		// checks if our query is successful
