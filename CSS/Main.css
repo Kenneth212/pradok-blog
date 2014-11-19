@@ -1,10 +1,11 @@
 body{
 	background-color: blue; 
 }
-/*made a i-pad resolution for 1024*/
 @media (min-width: 320px) { 
 	html { background-color: green; }
 }
+/*/made a i-pad resolution for 1024/*/
 @media (max-width: 1024px) { 
 	html { background-color: green; }
 }
+

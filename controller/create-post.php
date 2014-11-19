@@ -17,6 +17,4 @@
 		else {
 			echo "<p>$connection->error</p>";
 		}
-
 		//added another connection variable
-		$connection->close();

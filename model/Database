@@ -10,6 +10,7 @@ class Database {
 	private $password;
 	private $database;
 	// the construct function purpose is create an object
+	// the __construct is going to execute the information in the for variables.
 	public function __construct($host, $username, $password, $database) {
 		$this->host = $host;
 		$this->username = $username;
@@ -33,9 +34,15 @@ class Database {
 	}
 
 	public function query($string) {
+		$this->openConnection();
+ 		//opened the Connection
+		$query = $this->Connection->query($string);
 
+		$this->closeConnection();
+		//closes the Connection
+		return $query;
 	}
+	//The query Variable is going to execute a query variables
 	//
-	// 
-	// 
+	//
 }
