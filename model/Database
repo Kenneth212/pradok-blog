@@ -62,12 +62,12 @@ class Database {
 		if(!$query) {
 			$this->error = $this->connection->error;	
 		}
-		//this will chech if its false and if its false it will turn it to true
+		//this will check if its false and if its false it will turn it to true
 		$this->closeConnection();
 		//closes the Connection
 		return $query;
 	}
 	//The query Variable is going to execute a query variables
 	//The database file is going to reuse the code so it can be used over and over agian 
-	//
+	//Out putting echos
 }

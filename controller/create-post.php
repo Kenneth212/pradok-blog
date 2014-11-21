@@ -9,12 +9,12 @@
 		echo "<p>Title: $title</p>";
 		echo "<p>Post: $post</p>";
 
-		$query = $connection->query("INSERT INTO posts SET title = '$title', post = '$post'");
+		$query = $_SESSION["connection"]->query("INSERT INTO posts SET title = '$title', post = '$post'");
 
 		if($query) {
 				echo "<p>Successfully inserted post: $title</p>";
 		}
 		else {
-			echo "<p>$connection->error</p>";
+			echo "<p>" . $_SESSION["connection"]->error"</p>";
 		}
 		//added another connection variable

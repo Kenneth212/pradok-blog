@@ -1,6 +1,7 @@
 <?php
 	require_once(__DIR__ . "/database.php");
-	// added this as a config file
+	session_start();
+
 	$path = "/pradok-blog/";
 
 	$host = "localhost";
@@ -9,4 +10,10 @@
 	$database = "blog_db";
 	// based off of the old class
 	// the database object is going to query the database
-	$connection = new Database($host, $username, $password, $database);
+	// sessions used to save databse objects
+	// session equal to database connection
+
+	if(!isset($_SESSION["connection"])) {
+		$connection = new Database($host, $username, $password, $database);
+		$_SESSION["connection"] = $connection;
+	}
