@@ -6,7 +6,7 @@
 
 <form method="post" action="<?php echo $path . "controller/create-post.php"; ?>">
 	<div>
-		<label for="title">Title : </label>
+		<label for="title">Title: </label>
 		<input type="text" name="title" />
 	</div>
 	

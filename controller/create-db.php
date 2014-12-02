@@ -7,7 +7,7 @@
 		. "posts text NOT NULL,"
 		. "PRIMARY KEY (id))");
 
-	if ($query) {
+	if($query) {
 		echo "Successfully create table: posts";
 	}
 	else {
