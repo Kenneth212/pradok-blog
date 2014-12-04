@@ -8,28 +8,28 @@ class Database {
 	private $host;
 	private $username;
 	private $password;
-	private $database;
+	private $Database;
 	public $error;
 //}
 	// the construct function purpose is create an object
 	// the __construct is going to execute the information in the for variables.
-	public function __construct($host, $username, $password, $database) {
+	public function __construct($host, $username, $password, $Database) {
 		$this->host = $host;
 		$this->username = $username;
 		$this->password = $password;
-		$this->database = $database;
+		$this->database = $Database;
 
 		$this->connection = new mysqli($host, $username, $password);
 	
 		if ($this->connection->connect_error) {
 		die("<p>Error: " . $connection->connect_error . "</p>");
 	}
-	$exists = $connection->select_db($database);
+	$exists = $this->connection->select_db($Database);
 	
 	if(!$exists) {
 		// Why should I use classes rather than just a collection of functions? well because fucntions are part of classes so thats why using classes is better.
 		// sends commands to the database
-		$query = $connection->query("CREATE DATABASE $database");
+		$query = $connection->query("CREATE DATABASE $Database");
 		// checks if our query is successful
 		 if($query) {
 			echo "<p>Successfully created database: " . $database . "</p>";
@@ -39,12 +39,12 @@ class Database {
 	else {
 		echo "<p>DATABASE already exists.</p>";
 	}
+	}
 	//Added a new mysqli object
-	//
 	public function openConnection() {
 		$this->connection = new mysqli($this->host, $this->username, $this->password);
 
-		if ($connection->connect_error) {
+		if ($this->connection->connect_error) {
 			die("<p>Error: " . $this->connection->connect_error . "<p>");
 		}
 	}
@@ -58,7 +58,7 @@ class Database {
 	public function query($string) {
 		$this->openConnection();
  		//opened the Connection
-		$query = $this->Connection->query($string);
+		$query = $this->connection->query($string);
 
 		if(!$query) {
 			$this->error = $this->connection->error;	

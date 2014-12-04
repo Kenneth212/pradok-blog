@@ -15,6 +15,6 @@
 				echo "<p>Successfully inserted post: $title</p>";
 		}
 		else {
-			echo "<p>" . $_SESSION["connection"]->error"</p>";
+			echo "<p>" . $_SESSION["connection"]->error . "</p>";
 		}
 		//added another connection variable

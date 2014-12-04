@@ -1,5 +1,6 @@
 body{
 	background-color: blue; 
+	text-align: center;
 }
 @media (min-width: 320px) { 
 	html { background-color: green; }

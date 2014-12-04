@@ -1,8 +1,14 @@
-<form>
+<?php
+	require_once(__DIR__ . "/../model/config.php");
+?>
+
+<h1>Register</h1>
+	
+<form method="post" action="">
 	<div>
 	<!-- makes the user a place to put email -->
-	 <label for="email">Email:</label>
-	 <input type="text" name="email" />
+	 	<label for="email">Email: </label>
+	 	<input type="text" name="email" />
 	</div>
 
 	<div>
