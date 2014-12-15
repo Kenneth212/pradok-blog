@@ -1,8 +1,8 @@
 <?php
 	require_once(__DIR__ . "/Database.php");
-
 	require_once(__DIR__ . "/date.php");
 	session_start();
+	session_regenerate_id(true);
 
 	$path = "/pradok-blog/";
 

@@ -8,28 +8,27 @@ class Database {
 	private $host;
 	private $username;
 	private $password;
-	private $Database;
+	private $database;
 	public $error;
-//}
 	// the construct function purpose is create an object
 	// the __construct is going to execute the information in the for variables.
-	public function __construct($host, $username, $password, $Database) {
+	public function __construct($host, $username, $password, $database) {
 		$this->host = $host;
 		$this->username = $username;
 		$this->password = $password;
-		$this->database = $Database;
+		$this->database = $database;
 
 		$this->connection = new mysqli($host, $username, $password);
 	
 		if ($this->connection->connect_error) {
-		die("<p>Error: " . $connection->connect_error . "</p>");
+			die("<p>Error: " . $this->connection->connect_error . "</p>");
 	}
-	$exists = $this->connection->select_db($Database);
+	$exists = $this->connection->select_db($database);
 	
 	if(!$exists) {
 		// Why should I use classes rather than just a collection of functions? well because fucntions are part of classes so thats why using classes is better.
 		// sends commands to the database
-		$query = $connection->query("CREATE DATABASE $Database");
+		$query = $this->connection->query("CREATE DATABASE $database");
 		// checks if our query is successful
 		 if($query) {
 			echo "<p>Successfully created database: " . $database . "</p>";
@@ -37,12 +36,12 @@ class Database {
 	}
 	// 	shows that DATABASE exists 
 	else {
-		echo "<p>DATABASE already exists.</p>";
+		echo "<p>DATABASE already exists</p>";
 	}
 	}
 	//Added a new mysqli object
 	public function openConnection() {
-		$this->connection = new mysqli($this->host, $this->username, $this->password);
+		$this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
 
 		if ($this->connection->connect_error) {
 			die("<p>Error: " . $this->connection->connect_error . "<p>");

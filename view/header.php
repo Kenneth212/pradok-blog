@@ -1,9 +1,23 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="CSS/Main.css">
-	<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/Main.css">
+	<link rel="stylesheet" type="text/css" href="css/custom-style.css">
 	<title></title>
 </head>
 <body>
+	<div class="container">
+		<p> container </p>
+	<div class="row">
+		<p> row </p>
+	<div class="col-xs-10">
+		<p> col-xs-10</p>
+	</div>
+	<div class="col-xs-12">
+		<p> col-xs-12</p>
+	</div>
+	</div>
+	</div>
+</body>
+</html>

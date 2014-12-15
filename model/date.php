@@ -1,7 +1,8 @@
 <?php
 
-$d1 = new Datetime("TODAY");
+$date = new Datetime("TODAY");
 
-echo $d1->format("m-d-Y");
-
+$time = new Datetime('America/Los_Angeles');
+//month-day-year
+echo $date->format("-M-D-Y-") . "at" . $time->format("h:i");
 ?>
